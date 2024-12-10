@@ -91,18 +91,19 @@
     </section>
 
     <section class="form-container">
-        <form action="#" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <form action="https://manage.kmail-lists.com/subscriptions/subscribe" method="POST">
+    <input type="hidden" name="g" value="YOUR_LIST_ID"> <!-- Replace with your Klaviyo list ID -->
+    <label for="name">Name</label>
+    <input type="text" id="name" name="first_name" placeholder="Your Name" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone_number" placeholder="Your Phone Number" required>
 
-            <button type="submit">Sign Up Now</button>
-        </form>
+    <button type="submit">Sign Up Now</button>
+</form>
     </section>
 
     <section class="about">
