@@ -3,104 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - The Silverwing Bar</title>
+    <title>The Silverwing Bar</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #004d00; /* Dark Green Background */
-            color: #fff;
+            background-color: #f4f4f4;
+            color: #333;
         }
+
         header {
-            background-color: #002200; /* Darker Green */
-            padding: 1em;
+            background-color: #003300;
+            color: #fff;
+            padding: 20px;
             text-align: center;
         }
+
         header h1 {
             margin: 0;
-            color: #fff;
+            font-size: 2.5em;
         }
-        .form-container {
-            max-width: 400px;
-            margin: 3em auto;
-            background-color: #000; /* Black Background */
-            padding: 2em;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
         }
-        .form-container h2 {
-            text-align: center;
-            margin-bottom: 1em;
-            color: #00ff00; /* Bright Green for Highlight */
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
+        h2 {
+            color: #003300;
+        }
+
         form {
             display: flex;
             flex-direction: column;
         }
-        form label {
-            margin-bottom: 0.5em;
+
+        label {
+            margin-top: 10px;
             font-weight: bold;
         }
-        form input {
-            margin-bottom: 1em;
-            padding: 0.75em;
-            border: none;
-            border-radius: 4px;
-            font-size: 1em;
+
+        input {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
-        form input:focus {
-            outline: 2px solid #00ff00;
+
+        input:focus {
+            outline: none;
+            border-color: #003300;
         }
-        form button {
-            background-color: #00ff00;
-            color: #000;
-            padding: 0.75em;
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #003300;
+            color: #fff;
             border: none;
-            border-radius: 4px;
-            font-size: 1em;
+            border-radius: 5px;
+            font-size: 1.1em;
             cursor: pointer;
         }
-        form button:hover {
-            background-color: #00cc00;
+
+        button:hover {
+            background-color: #005500;
         }
+
         footer {
-            background-color: #002200;
             text-align: center;
-            padding: 1em;
-            color: #fff;
-            margin-top: 2em;
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>The Silverwing Bar</h1>
+        <p>Exclusive deals, early event access, and much more await!</p>
     </header>
 
-    <section class="form-container">
+    <div class="container">
         <h2>Sign Up for Exclusive Offers</h2>
-        <form action="https://manage.kmail-lists.com/subscriptions/subscribe" method="POST">
-            <input type="hidden" name="g" value="Vw4jUw"> <!-- Klaviyo List ID -->
+        <p>Join our mailing list to enjoy discounts on your favorite drinks, early access to our events, seat reservations, and more!</p>
 
-            <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" required>
+        <form action="/submit-form" method="POST">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone_number" placeholder="Enter your phone number" required>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
 
             <button type="submit">Sign Up</button>
         </form>
-    </section>
+    </div>
 
     <footer>
-        <p>&copy; 2024 The Silverwing Bar | Your Local Family Bar in Edinburgh</p>
+        &copy; 2024 The Silverwing Bar. All Rights Reserved.
     </footer>
-
-    <!-- Klaviyo Embed Script -->
-    <script async type='text/javascript' src='https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=R7XKwS'></script>
 </body>
 </html>
